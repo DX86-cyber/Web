@@ -1,0 +1,130 @@
+/* Ensure the body and html take up the full height of the page */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the background video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Styling for content to be visible over the video */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding-top: 20%;
+    color: #f3961c;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:hover{
+    color: #f3961c;
+}
+
+/* Styling for the card-blogs container */
+.card-blogs {
+    position: fixed; /* Use fixed positioning */
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    padding: 25px;
+    color: white;
+    text-align: center; /* Center the text */
+    z-index: 1; /* Ensure it's above the video */
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    max-height: 50vh; /* Limit the height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Styling for the card box */
+.card-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px; /* Limit the width */
+    margin: 0 auto; /* Center the box */
+}
+
+/* Navbar styling */
+.nav-bar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.mywebsite {
+    color: white;
+    font-size: 30px;
+    padding-left: 10px;
+}
+h3{
+    font-family: arial;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    font-size: 10px;
+    gap: 18px;
+    margin-right: 20px;
+}
+/* 
+.nav-bar {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+} */
+
+li a:hover {
+    color: #f3961c;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 10;
+        border-left: 1px solid var(--hover-colour);
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        padding-left: 2.5rem;
+    }
+
+    nav a.active-links {
+        border-bottom: none;
+    }
+
+    nav .home-list {
+        margin-right: unset;
+    }
+}
